@@ -16,7 +16,19 @@ def secure_archive(file_name: str,
 
 
 def main():
-    pass
+    print("=== Cyber Archives Security ===")
+    print("Using 'secure_archive' to read from a nonexistent file:")
+    print(secure_archive("non-existing"))
+    print()
+    print("Using 'secure_archive' to read from an inaccessable file:")
+    print(secure_archive("inaccessable"))
+    print()
+    print("Using 'secure_archive' to read from a regular file:")
+    Boolean, content = secure_archive("meow")
+    print((Boolean, content))
+    print()
+    print("Using 'secure_archive' to write previous content to a new file:")
+    print(secure_archive("new_file", "w", content))
 
 
 if __name__ == "__main__":
